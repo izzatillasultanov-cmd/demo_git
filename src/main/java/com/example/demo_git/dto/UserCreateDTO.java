@@ -1,28 +1,12 @@
-package com.example.demo_git.user;
+package com.example.demo_git.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "user")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class UserCreateDTO {
     private String name;
     private String fullName;
 
-    public User(String name, String fullName) {
-
+    public UserCreateDTO(String name, String fullName) {
         this.name = name;
         this.fullName = fullName;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
