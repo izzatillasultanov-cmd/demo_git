@@ -10,4 +10,11 @@ public class UserMapperImpl implements UserMapper{
         return new User (userCreateDTO.getName(),
         userCreateDTO.getFullName());
     }
+
+    @Override
+    public UserResponseDTO toDTO(User user) {
+        return new UserResponseDTO(user.getId(),
+                user.getName(),
+                user.getFullName());
+    }
 }

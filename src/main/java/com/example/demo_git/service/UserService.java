@@ -1,7 +1,8 @@
 package com.example.demo_git.service;
 
 import com.example.demo_git.dto.UserCreateDTO;
+import com.example.demo_git.dto.UserResponseDTO;
 
 public interface UserService {
-    void save(UserCreateDTO userCreateDTO);
+    UserResponseDTO save(UserCreateDTO userCreateDTO);
 }
