@@ -5,4 +5,6 @@ import com.example.demo_git.dto.UserResponseDTO;
 
 public interface UserService {
     UserResponseDTO save(UserCreateDTO userCreateDTO);
+
+    UserResponseDTO findById(Long id);
 }

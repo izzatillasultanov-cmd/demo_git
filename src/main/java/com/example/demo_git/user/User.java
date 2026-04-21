@@ -11,6 +11,9 @@ public class User {
     private String name;
     private String fullName;
 
+    public User() {
+    }
+
     public User(String name, String fullName) {
 
         this.name = name;

@@ -8,6 +8,8 @@ import com.example.demo_git.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 
 public class UserServiceImpl implements UserService{
@@ -29,5 +31,15 @@ public class UserServiceImpl implements UserService{
         UserResponseDTO save = userMapper.toDTO(user1);
         return save;
 
+    }
+
+    @Override
+    public UserResponseDTO findById(Long id) {
+        Optional<User> saved = userRepository.findById(id);
+        if (saved.isEmpty()) {
+            throw new RuntimeException();
+        }
+        User user = saved.get();
+        return userMapper.toDTO(user);
     }
 }
