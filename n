@@ -1,0 +1,59 @@
+[33mcommit 64726bcd8ca55d37631ae9093ee6966bbdad8ec7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Tue Apr 21 21:03:38 2026 +0500
+
+    Add findById
+
+[33mcommit 3af8535d831728f13b6115ca2aff0e0b20fdf462[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Tue Apr 21 20:44:28 2026 +0500
+
+    ADD response
+
+[33mcommit f63b6bb763b790e3bea0598bca95c0f9e7eb93a8[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Thu Apr 16 21:00:11 2026 +0500
+
+    Fix User,MapperImpl
+
+[33mcommit de5991a9d2fbc70776fb953455b2c8bf83c25c87[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Thu Apr 16 20:43:46 2026 +0500
+
+    Add controller init
+
+[33mcommit a1f6a63b7020a81effdb11742aacce8809214b20[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Thu Apr 16 20:36:07 2026 +0500
+
+    Add dto and Service
+
+[33mcommit 87687e93619a979b32e8d72dc4ec161740f95b9d[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Thu Apr 16 20:17:50 2026 +0500
+
+    Add repository
+
+[33mcommit d45dc57fc0ff5bf9fbdc251145d9cbe871edf39b[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Tue Apr 14 21:05:44 2026 +0500
+
+    Add Entity-user
+
+[33mcommit 67691b47d3e9f642569910318b8911bf1bfa374b[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Tue Apr 14 20:55:43 2026 +0500
+
+    ADD userController
+
+[33mcommit cc3ab53fbb6880a1538bbcbf95ae018cf5e99cb7[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Tue Apr 14 20:40:27 2026 +0500
+
+    Add text
+
+[33mcommit f8a7a70ca92b07af41d764320eadf579825ea2ba[m
+Author: Izzatilla <izzatillasultanov@gmail.com>
+Date:   Tue Apr 14 20:35:38 2026 +0500
+
+    init

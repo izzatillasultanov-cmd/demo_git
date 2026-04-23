@@ -8,11 +8,13 @@ import com.example.demo_git.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
 
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
 
     private UserRepository userRepository;
@@ -42,4 +44,17 @@ public class UserServiceImpl implements UserService{
         User user = saved.get();
         return userMapper.toDTO(user);
     }
+
+    @Override
+    public List<UserResponseDTO> findAll() {
+        List<User> saved = userRepository.findAll();
+        List<UserResponseDTO> userResponseDTOS = new ArrayList<>();
+        for (User user1 : saved) {
+            UserResponseDTO userResponseDTO = userMapper.toDTO(user1);
+            userResponseDTOS.add(userResponseDTO);
+        }
+        return userResponseDTOS;
+    }
+
+
 }
