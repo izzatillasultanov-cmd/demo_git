@@ -12,6 +12,6 @@ public interface UserService {
 
     List<UserResponseDTO> findAll();
 
-    public void deleteByID(Long id);
+    UserResponseDTO deleteByID(Long id);
 
 }

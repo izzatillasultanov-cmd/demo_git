@@ -57,9 +57,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void  deleteByID(Long id) {
-        userRepository.deleteById(id);
+   public UserResponseDTO deleteByID(Long id) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isEmpty()) {
+            throw new RuntimeException();
+        }
+        User user = optionalUser.get();
 
+        userRepository.deleteById(id);
+        return userMapper.toDTO(user);
     }
 
 

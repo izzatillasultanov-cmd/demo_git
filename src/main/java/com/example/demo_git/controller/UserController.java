@@ -35,7 +35,7 @@ public class UserController {
     }
 
     @DeleteMapping("/deleteById")
-    public void deleteByID(@RequestParam("id") Long id) {
-        userService.deleteByID(id);
+    public UserResponseDTO deleteByID(@RequestParam("id") Long id) {
+        return userService.deleteByID(id);
     }
 }
