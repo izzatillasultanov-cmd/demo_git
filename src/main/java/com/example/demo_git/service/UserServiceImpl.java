@@ -56,5 +56,11 @@ public class UserServiceImpl implements UserService {
         return userResponseDTOS;
     }
 
+    @Override
+    public void  deleteByID(Long id) {
+        userRepository.deleteById(id);
+
+    }
+
 
 }

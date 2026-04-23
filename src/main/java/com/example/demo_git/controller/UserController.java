@@ -33,4 +33,9 @@ public class UserController {
     public List<UserResponseDTO> findAll() {
         return userService.findAll();
     }
+
+    @DeleteMapping("/deleteById")
+    public void deleteByID(@RequestParam("id") Long id) {
+        userService.deleteByID(id);
+    }
 }
