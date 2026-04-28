@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -74,6 +75,15 @@ public class UserServiceImpl implements UserService {
         return userList.stream()
                 .mapToInt(e -> e.getAge())
                 .sum();
+    }
+
+    @Override
+    public UserResponseDTO getMaxAge() {
+        List<User> userList = userRepository.findAll();
+        return userList.stream()
+                .max(Comparator.comparing(User::getAge))
+                .map(e -> userMapper.toDTO(e))
+                .orElseThrow();
     }
 
 

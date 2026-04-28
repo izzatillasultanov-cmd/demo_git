@@ -44,4 +44,8 @@ public class UserController {
         return userService.getAllAge();
     }
 
+    @GetMapping("/getMaxAge")
+    public UserResponseDTO getMaxAge() {
+        return userService.getMaxAge();
+    }
 }

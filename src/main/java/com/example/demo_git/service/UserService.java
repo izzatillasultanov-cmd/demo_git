@@ -16,4 +16,5 @@ public interface UserService {
 
     int getAllAge();
 
+    UserResponseDTO getMaxAge();
 }
