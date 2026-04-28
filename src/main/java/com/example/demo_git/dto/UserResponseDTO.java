@@ -4,11 +4,23 @@ public class UserResponseDTO {
     private Long id;
     private String name;
     private String fullName;
+    private int age;
 
-    public UserResponseDTO(Long id, String name, String fullName) {
+
+    public UserResponseDTO(Long id, String name, String fullName, int age) {
+
         this.id = id;
         this.name = name;
         this.fullName = fullName;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public Long getId() {

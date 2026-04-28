@@ -10,14 +10,16 @@ public class User {
     private Long id;
     private String name;
     private String fullName;
+    private int age;
 
     public User() {
     }
 
-    public User(String name, String fullName) {
+    public User(String name, String fullName,int age) {
 
         this.name = name;
         this.fullName = fullName;
+        this.age = age;
     }
 
     public Long getId() {
@@ -38,6 +40,14 @@ public class User {
 
     public String getFullName() {
         return fullName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public void setFullName(String fullName) {

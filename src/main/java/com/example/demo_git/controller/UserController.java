@@ -38,4 +38,10 @@ public class UserController {
     public UserResponseDTO deleteByID(@RequestParam("id") Long id) {
         return userService.deleteByID(id);
     }
+
+    @GetMapping("/getAllAge")
+    public int getAllAge() {
+        return userService.getAllAge();
+    }
+
 }

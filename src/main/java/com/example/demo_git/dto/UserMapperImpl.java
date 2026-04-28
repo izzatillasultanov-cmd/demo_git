@@ -7,14 +7,17 @@ import org.springframework.stereotype.Component;
 public class UserMapperImpl implements UserMapper{
     @Override
     public User toUser(UserCreateDTO userCreateDTO) {
-        return new User (userCreateDTO.getName(),
-        userCreateDTO.getFullName());
+        return new User(userCreateDTO.getName(),
+                userCreateDTO.getFullName(),
+                userCreateDTO.getAge());
     }
 
     @Override
     public UserResponseDTO toDTO(User user) {
         return new UserResponseDTO(user.getId(),
                 user.getName(),
-                user.getFullName());
+                user.getFullName(),
+                user.getAge());
     }
+
 }

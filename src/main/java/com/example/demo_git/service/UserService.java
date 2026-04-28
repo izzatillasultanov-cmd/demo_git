@@ -14,4 +14,6 @@ public interface UserService {
 
     UserResponseDTO deleteByID(Long id);
 
+    int getAllAge();
+
 }
