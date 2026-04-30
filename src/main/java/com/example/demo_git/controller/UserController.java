@@ -54,4 +54,9 @@ public class UserController {
         return userService.findIdRange(min, max);
 
     }
+
+    @GetMapping("/getAgeByIdRange")
+    public int getAgeById(@RequestParam("min") Long min, @RequestParam("max") Long max) {
+        return userService.getAgeByRange(min, max);
+    }
 }

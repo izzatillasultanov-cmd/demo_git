@@ -96,5 +96,19 @@ public class UserServiceImpl implements UserService {
                 .toList();
     }
 
+    @Override
+    public int getAgeByRange(long min, long max) {
+        List<User> userList = userRepository.findAll();
+
+        List<User> save = userList.stream()
+                .filter(e -> e.getId() >= min)
+                .filter(e -> e.getId() <= max)
+                .toList();
+
+        return save.stream()
+                .mapToInt(e -> e.getAge())
+                .sum();
+    }
+
 
 }

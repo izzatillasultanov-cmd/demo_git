@@ -19,4 +19,6 @@ public interface UserService {
     UserResponseDTO getMaxAge();
 
     List<UserResponseDTO> findIdRange(long id1,long id2);
+
+    int getAgeByRange(long min, long max);
 }
