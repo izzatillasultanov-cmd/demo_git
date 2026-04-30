@@ -86,5 +86,15 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow();
     }
 
+    @Override
+    public List<UserResponseDTO> findIdRange(long id1, long id2) {
+        List<User> userlist = userRepository.findAll();
+        return userlist.stream()
+                .filter(e -> e.getId() >= id1)
+                .filter(e -> e.getId() <= id2)
+                .map(e -> userMapper.toDTO(e))
+                .toList();
+    }
+
 
 }
