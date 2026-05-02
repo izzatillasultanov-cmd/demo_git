@@ -9,7 +9,9 @@ public class UserMapperImpl implements UserMapper{
     public User toUser(UserCreateDTO userCreateDTO) {
         return new User(userCreateDTO.getName(),
                 userCreateDTO.getFullName(),
-                userCreateDTO.getAge());
+                userCreateDTO.getAge(),
+                userCreateDTO.getDeleted());
+
     }
 
     @Override
@@ -17,7 +19,8 @@ public class UserMapperImpl implements UserMapper{
         return new UserResponseDTO(user.getId(),
                 user.getName(),
                 user.getFullName(),
-                user.getAge());
+                user.getAge(),
+                user.getDeleted());
     }
 
 }

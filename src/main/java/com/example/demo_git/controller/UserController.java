@@ -59,4 +59,9 @@ public class UserController {
     public int getAgeById(@RequestParam("min") Long min, @RequestParam("max") Long max) {
         return userService.getAgeByRange(min, max);
     }
+
+    @DeleteMapping("/softDelete")
+    public UserResponseDTO softDelete(@RequestParam("id") Long id) {
+        return userService.softDelete(id);
+    }
 }

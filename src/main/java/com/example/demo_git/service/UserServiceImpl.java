@@ -18,8 +18,8 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
 
-    private UserRepository userRepository;
-    private UserMapper userMapper;
+    private final UserRepository userRepository;
+    private final UserMapper userMapper;
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository, UserMapper userMapper) {
@@ -99,15 +99,25 @@ public class UserServiceImpl implements UserService {
     @Override
     public int getAgeByRange(long min, long max) {
         List<User> userList = userRepository.findAll();
-
         List<User> save = userList.stream()
                 .filter(e -> e.getId() >= min)
                 .filter(e -> e.getId() <= max)
                 .toList();
-
         return save.stream()
                 .mapToInt(e -> e.getAge())
                 .sum();
+    }
+
+    @Override
+    public UserResponseDTO softDelete(Long id) {
+        Optional<User> userOptional = userRepository.findById(id);
+        if (userOptional.isEmpty()) {
+            throw new RuntimeException("NOt user");
+        }
+        User user = userOptional.get();
+        user.setDeleted(true);
+        userRepository.save(user);
+        return userMapper.toDTO(user);
     }
 
 

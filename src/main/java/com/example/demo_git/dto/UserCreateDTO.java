@@ -4,11 +4,13 @@ public class UserCreateDTO {
     private String name;
     private String fullName;
     private int age;
+    private Boolean deleted;
 
-    public UserCreateDTO(String name, String fullName,int age) {
+    public UserCreateDTO(String name, String fullName,int age,Boolean deleted) {
         this.name = name;
         this.fullName = fullName;
         this.age = age;
+        this.deleted = deleted;
     }
 
     public String getName() {
@@ -33,5 +35,13 @@ public class UserCreateDTO {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
     }
 }

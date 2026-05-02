@@ -5,14 +5,16 @@ public class UserResponseDTO {
     private String name;
     private String fullName;
     private int age;
+    private Boolean deleted;
 
 
-    public UserResponseDTO(Long id, String name, String fullName, int age) {
+    public UserResponseDTO(Long id, String name, String fullName, int age,Boolean deleted) {
 
         this.id = id;
         this.name = name;
         this.fullName = fullName;
         this.age = age;
+        this.deleted = deleted;
     }
 
     public int getAge() {
@@ -45,5 +47,13 @@ public class UserResponseDTO {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
     }
 }

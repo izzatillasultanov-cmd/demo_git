@@ -21,4 +21,8 @@ public interface UserService {
     List<UserResponseDTO> findIdRange(long id1,long id2);
 
     int getAgeByRange(long min, long max);
+
+    UserResponseDTO softDelete(Long id);
+
+
 }
