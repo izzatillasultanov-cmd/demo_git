@@ -64,4 +64,10 @@ public class UserController {
     public UserResponseDTO softDelete(@RequestParam("id") Long id) {
         return userService.softDelete(id);
     }
+
+    @GetMapping("/getAgeTotalDeleted")
+    public int getAgeTotalDeleted() {
+        return userService.getTotalAgeDeleted();
+    }
+
 }
