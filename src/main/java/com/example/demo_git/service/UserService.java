@@ -2,6 +2,7 @@ package com.example.demo_git.service;
 
 import com.example.demo_git.dto.UserCreateDTO;
 import com.example.demo_git.dto.UserResponseDTO;
+import com.example.demo_git.user.User;
 
 import java.util.List;
 
@@ -25,6 +26,8 @@ public interface UserService {
     UserResponseDTO softDelete(Long id);
 
     int getTotalAgeDeleted();
+
+    UserResponseDTO getName(UserCreateDTO userCreateDTO);
 
 
 }

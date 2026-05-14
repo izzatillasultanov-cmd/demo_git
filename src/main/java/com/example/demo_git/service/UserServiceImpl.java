@@ -124,5 +124,21 @@ public class UserServiceImpl implements UserService {
                 .sum();
     }
 
+    @Override
+    public UserResponseDTO getName(UserCreateDTO userCreateDTO) {
+        User user = new User();
+        User result = new User();
+        for (int i = 0; i < userCreateDTO.getName().length(); i++) {
+            if (Character.isDigit(userCreateDTO.getName().charAt(i))) {
+                throw new RuntimeException("name wasn't created numbers");
+
+            } else if (userCreateDTO.getName().length() - 1 == i) {
+                User user1 = userMapper.toUser(userCreateDTO);
+                 result = userRepository.save(user1);
+            }
+        }
+        return userMapper.toDTO(result);
+    }
+
 
 }
