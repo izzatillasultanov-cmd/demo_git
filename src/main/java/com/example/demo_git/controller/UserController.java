@@ -70,4 +70,10 @@ public class UserController {
         return userService.getTotalAgeDeleted();
     }
 
+    @GetMapping("/getName")
+    public UserResponseDTO getName(@RequestBody UserCreateDTO userCreateDTO) {
+        return userService.getName(userCreateDTO);
+
+    }
+
 }
