@@ -76,4 +76,17 @@ public class UserController {
 
     }
 
+    @GetMapping("/1")
+    public int  getName1() {
+        return userService.getTotalAgeDeleted();
+    }
+    @GetMapping("/2")
+    public int  getName2() {
+        return userService.getTotalAgeDeleted();
+    }
+    @GetMapping("/3")
+    public int  getName3() {
+        return userService.getTotalAgeDeleted();
+    }
+
 }
