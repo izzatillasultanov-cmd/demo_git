@@ -29,5 +29,7 @@ public interface UserService {
 
     UserResponseDTO getName(UserCreateDTO userCreateDTO);
 
+    UserResponseDTO findMyId(Long id);
+
 
 }
